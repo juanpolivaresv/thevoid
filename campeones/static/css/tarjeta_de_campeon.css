@@ -1,0 +1,77 @@
+.tarjetaDeCampeon-link {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 520px;
+}
+
+.tarjetaDeCampeon-article {
+	border: 1px solid rgb(30, 30, 30);
+	height: 315px;
+	width: 520px;
+	position: relative;
+	/* Gradient */
+	background: rgb(45,45,45);
+	background: -moz-linear-gradient(top, rgba(45,45,45,1) 0%, rgba(40,40,40,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(45,45,45,1)), color-stop(100%,rgba(40,40,40,1)));
+	background: -webkit-linear-gradient(top, rgba(45,45,45,1) 0%,rgba(40,40,40,1) 100%);
+	background: -o-linear-gradient(top, rgba(45,45,45,1) 0%,rgba(40,40,40,1) 100%);
+	background: -ms-linear-gradient(top, rgba(45,45,45,1) 0%,rgba(40,40,40,1) 100%);
+	background: linear-gradient(to bottom, rgba(45,45,45,1) 0%,rgba(40,40,40,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2d2d', endColorstr='#282828',GradientType=0 );
+}
+
+.tarjetaDeCampeon-article:hover {
+	/* Gradient */
+	background: rgb(55,55,55);
+	background: -moz-linear-gradient(top, rgba(55,55,55,1) 0%, rgba(50,50,50,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(55,55,55,1)), color-stop(100%,rgba(50,50,50,1)));
+	background: -webkit-linear-gradient(top, rgba(55,55,55,1) 0%,rgba(50,50,50,1) 100%);
+	background: -o-linear-gradient(top, rgba(55,55,55,1) 0%,rgba(50,50,50,1) 100%);
+	background: -ms-linear-gradient(top, rgba(55,55,55,1) 0%,rgba(50,50,50,1) 100%);
+	background: linear-gradient(to bottom, rgba(55,55,55,1) 0%,rgba(50,50,50,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373737', endColorstr='#323232',GradientType=0 );
+}
+
+.tarjetaDeCampeon-contenido {
+	background-color: rgb(75, 75, 75);
+	bottom: 10px;
+	border: 1px solid rgb(30, 30, 30);
+	left: 10px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	/* Box Shadow */
+	/*-webkit-box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 1);
+	-moz-box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 1);
+	box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 1);*/
+}
+
+.tarjetaDeCampeon-contenido img {
+	height: 293px;
+	width: 498px;
+}
+
+.tarjetaDeCampeon-nombre {
+	bottom: 0;
+	color: rgb(205, 205, 205);
+	font-size: 17.5px;
+	left: 0;
+	margin-bottom: 32.5px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	text-shadow: 0px 0px 2.5px rgba(0, 0, 0, 1);
+}
+
+.tarjetaDeCampeon-descripcion {
+	bottom: 0;
+	color: rgb(205, 205, 205);
+	font-size: 15px;
+	left: 0;
+	margin-bottom: 12.5px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	text-shadow: 0px 0px 2.5px rgba(0, 0, 0, 1);
+}

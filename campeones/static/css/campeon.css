@@ -1,0 +1,67 @@
+#campeon-article {
+	border: 1px solid rgb(30, 30, 30);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 404px;
+	width: 670px;
+	position: relative;
+	/* Gradient */
+	background: rgb(45,45,45);
+	background: -moz-linear-gradient(top, rgba(45,45,45,1) 0%, rgba(40,40,40,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(45,45,45,1)), color-stop(100%,rgba(40,40,40,1)));
+	background: -webkit-linear-gradient(top, rgba(45,45,45,1) 0%,rgba(40,40,40,1) 100%);
+	background: -o-linear-gradient(top, rgba(45,45,45,1) 0%,rgba(40,40,40,1) 100%);
+	background: -ms-linear-gradient(top, rgba(45,45,45,1) 0%,rgba(40,40,40,1) 100%);
+	background: linear-gradient(to bottom, rgba(45,45,45,1) 0%,rgba(40,40,40,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2d2d', endColorstr='#282828',GradientType=0 );
+}
+
+#campeon-avatar-marco {
+	border: 1px solid rgb(30, 30, 30);
+	left: -12.5px;
+	height: 140px;
+	width: 140px;
+	position: absolute;
+	top: 22.5px;
+	z-index: 1000;
+	/* Gradient */
+	background: rgb(45,45,45);
+	background: -moz-linear-gradient(top, rgba(45,45,45,1) 0%, rgba(40,40,40,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(45,45,45,1)), color-stop(100%,rgba(40,40,40,1)));
+	background: -webkit-linear-gradient(top, rgba(45,45,45,1) 0%,rgba(40,40,40,1) 100%);
+	background: -o-linear-gradient(top, rgba(45,45,45,1) 0%,rgba(40,40,40,1) 100%);
+	background: -ms-linear-gradient(top, rgba(45,45,45,1) 0%,rgba(40,40,40,1) 100%);
+	background: linear-gradient(to bottom, rgba(45,45,45,1) 0%,rgba(40,40,40,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2d2d', endColorstr='#282828',GradientType=0 );
+}
+
+#campeon-avatar-imagen {
+	background-color: rgb(75, 75, 75);
+	bottom: 10px;
+	border: 1px solid rgb(30, 30, 30);
+	left: 10px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+#campeon-avatar-imagen img {
+	height: 118px;
+	width: 118px;
+}
+
+#campeon-splash-imagen {
+	background-color: rgb(75, 75, 75);
+	bottom: 10px;
+	border: 1px solid rgb(30, 30, 30);
+	left: 10px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+#campeon-splash-imagen img {
+	height: 382px;
+	width: 648px;
+}

@@ -1,0 +1,7 @@
+{% if tipo == 'primario' %}
+	<div class="section-title">{{titulo}}</div>
+{% elif tipo == 'secundario' %}
+	<div class="section-title section-title-border-top section-margin-top">{{titulo}}</div>
+{% elif tipo == 'campeon' %}
+	<div class="section-title">{{campeon.nombre}} - {{campeon.descripcion}}</div>
+{% endif %}

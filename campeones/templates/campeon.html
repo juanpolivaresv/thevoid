@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}{{campeon.nombre}}{% endblock %}
+{% block content %}
+	{% include 'includes/section_title.html' with tipo='campeon' %}
+	<div class="section-separador"></div>
+	<article id="campeon-article">
+		<div id="campeon-avatar-marco">
+			<div id="campeon-avatar-imagen">
+				<img src="/{{campeon.get_avatar_url}}" alt="avatar">
+			</div>
+		</div>
+		<div id="campeon-splash-imagen">
+			<img src="/{{campeon.get_splash_url}}" alt="splash">
+		</div>
+	</article>
+	{% if campeon.rol_secundario %}
+	{% endif %}
+{% endblock %}
+{% block css_files %}
+	<link rel="stylesheet" href="{% static 'css/campeon.css' %}">
+{% endblock %}
+{% block js_files %}
+	<script src="{% static 'js/campeon.js' %}"></script>
+{% endblock %}

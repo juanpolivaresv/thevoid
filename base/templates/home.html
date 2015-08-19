@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Home{% endblock %}
+{% block section_title %}Home{% endblock %}
+{% block content %}
+	{% include 'includes/section_title.html' with tipo='primario' titulo='Campeón aleatorio' %}
+	{% include 'includes/tarjeta_de_campeon.html' with campeon=campeon_al_azar %}
+	{% include 'includes/section_title.html' with tipo='secundario' titulo='Texto de prueba' %}
+{% endblock %}
+{% block css_files %}
+	<link rel="stylesheet" href="{% static 'css/home.css' %}">
+	<link rel="stylesheet" href="{% static 'css/tarjeta_de_campeon.css' %}">
+{% endblock %}
