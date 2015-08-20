@@ -16,7 +16,6 @@ class Campeon(models.Model):
 	rol = models.ForeignKey(Rol, related_name='rol')
 	rol_secundario = models.ForeignKey(Rol, related_name='rol_secundario', blank=True, null=True)
 	slug = models.SlugField(max_length=256, editable=False)
-	avatar = models.ImageField(upload_to='campeones/static/img/avatar')
 	splash = models.ImageField(upload_to='campeones/static/img/splash')
 
 	def __unicode__(self):
@@ -29,9 +28,6 @@ class Campeon(models.Model):
 
 	def get_absolute_url(self):
 		return '/campeones/%s/%i/' % (self.slug, self.id)
-
-	def get_avatar_url(self):
-		return self.avatar.url[10:]
 
 	def get_splash_url(self):
 		return self.splash.url[10:]
