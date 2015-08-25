@@ -65,6 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'base.context_processors.datos_globales',
             ],
         },
     },
@@ -102,3 +103,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Champions ID
+# http://loldevelopers.de.vu/
+
+CHAMPIONS_ID = {
+    "Cho'Gath": 31,
+    "Kassadin": 38,
+    "Kha'Zix": 121,
+    "Kog'Maw": 96,
+    "Malzahar": 90,
+    "Rek'Sai": 421,
+    "Vel'Koz": 161,
+}
+
+
+# Otros datos del proyecto
+
+VERSION = '0.3'
+ULTIMA_ACTUALIZACION = '24-08-2015'

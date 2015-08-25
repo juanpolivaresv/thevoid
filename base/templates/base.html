@@ -25,7 +25,20 @@
 			<section id="base-section">
 				{% block content %}{% endblock %}
 			</section>
-			<footer id="base-footer"></footer>
+			<footer id="base-footer">
+				<p>Versión: {{datos_globales.version}} - Última actualización: {{datos_globales.ultima_actualizacion}}</p>
+			</footer>
+		</div>
+		<div id="base-lightbox">
+			<div id="base-lightbox-container">
+				<div id="base-lightbox-title">
+					<p></p>
+				</div>
+				<div id="base-lightbox-content">
+					<div id="base-lightbox-padding">
+					</div>
+				</div>
+			</div>
 		</div>
 		<script src="{% static 'js/base.js' %}"></script>
 		{% block js_files %}{% endblock %}

@@ -1,11 +1,26 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block title %}Home{% endblock %}
-{% block section_title %}Home{% endblock %}
 {% block content %}
 	{% include 'includes/section_title.html' with tipo='primario' titulo='Campeón aleatorio' %}
 	{% include 'includes/tarjeta_de_campeon.html' with campeon=campeon_al_azar %}
-	{% include 'includes/section_title.html' with tipo='secundario' titulo='Texto de prueba' %}
+	{% include 'includes/section_title.html' with tipo='secundario' titulo='Información de utilidad' %}
+	<div id="home-datos">
+		<ul class="lista">
+			<li>
+				<p>Número de campeones del Vacío registrados:</p> {{datos_globales.numero_de_campeones}}
+			</li>
+			<li>
+				<p>Número de campeones del Vacío con datos adicionales de Riot Games:</p> {{datos_globales.numero_de_campeones_con_datos}}
+			</li>
+			<li>
+				<p>Primer campeón registrado:</p> <a href="{{datos_globales.primer_campeon_registrado.get_absolute_url}}" title="{{datos_globales.primer_campeon_registrado.descripcion}}">{{datos_globales.primer_campeon_registrado.nombre}}</a>
+			</li>
+			<li>
+				<p>Último campeón registrado:</p> <a href="{{datos_globales.ultimo_campeon_registrado.get_absolute_url}}" title="{{datos_globales.ultimo_campeon_registrado.descripcion}}">{{datos_globales.ultimo_campeon_registrado.nombre}}</a>
+			</li>
+		</ul>
+	</div>
 {% endblock %}
 {% block css_files %}
 	<link rel="stylesheet" href="{% static 'css/home.css' %}">

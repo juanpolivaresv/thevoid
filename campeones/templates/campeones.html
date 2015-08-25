@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block title %}Campeones{% endblock %}
-{% block section_title %}Lista de campeones del vacio{% endblock %}
 {% block content %}
 	{% include 'includes/section_title.html' with tipo='primario' titulo='Lista de campeones del Vacío' %}
 	{% for campeon in campeones %}

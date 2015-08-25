@@ -15,10 +15,12 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(serialize=False, primary_key=True)),
                 ('nombre', models.CharField(help_text=b'Escribe el nombre del campeon', max_length=64)),
-                ('descripcion', models.CharField(help_text=b'Escribe la descripcion del campeon', max_length=256)),
+                ('descripcion', models.CharField(default=b'Sin datos de Riot Games', max_length=256, editable=False)),
                 ('slug', models.SlugField(max_length=256, editable=False)),
-                ('avatar', models.ImageField(upload_to=b'campeones/static/img/avatar')),
                 ('splash', models.ImageField(upload_to=b'campeones/static/img/splash')),
+                ('lore', models.TextField(default=b'', editable=False)),
+                ('actualizado', models.BooleanField(default=False, editable=False)),
+                ('ultima_actualizacion', models.CharField(default=b'Nunca', max_length=512, editable=False)),
             ],
         ),
         migrations.CreateModel(

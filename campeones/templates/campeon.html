@@ -2,15 +2,65 @@
 {% load staticfiles %}
 {% block title %}{{campeon.nombre}}{% endblock %}
 {% block content %}
-	{% include 'includes/section_title.html' with tipo='campeon' %}
+	{% include 'includes/section_title.html' with tipo='primario' titulo='Información de campeón' %}
 	<div class="section-separador"></div>
 	<article id="campeon-article">
-		<div id="campeon-splash-imagen">
+		<div id="campeon-contenido">
+			{% if campeon.actualizado %}
+				<div id="campeon-boton-datos" class="activado" data-status="actualizar" title="Última actualización: {{campeon.ultima_actualizacion}}">
+					Actualizar datos
+				</div>
+			{% else %}
+				<div id="campeon-boton-datos" class="activado" data-status="obtener">
+					Obtener datos
+				</div>
+			{% endif %}
+			<p id="campeon-nombre">{{campeon.nombre}}</p>
+			<p id="campeon-descripcion">{{campeon.descripcion}}</p>
 			<img src="/{{campeon.get_splash_url}}" alt="splash">
 		</div>
 	</article>
-	{% if campeon.rol_secundario %}
+	<div class="section-separador"></div>
+	{% if campeon.actualizado %}
+		<section>
+			<div id="campeon-nav">
+				<ul>
+					<li class="nav-option" data-content="datos_basicos">Datos básicos</li>
+					<li class="nav-option" data-content="historia">Historia</li>
+				</ul>
+			</div>
+			<!-- Datos básicos -->
+			<div class="campeon-datos-contenido" data-content="datos_basicos">
+				<div class="campeon-datos-padding">
+					<ul class="lista">
+						<li><p>Nombre:</p> {{campeon.nombre}}</li>
+						<li><p>Título:</p> {{campeon.descripcion}}</li>
+						<li><p>ID:</p> {{campeon.get_champion_id}}</li>
+						<li><p>Rol:</p> {{campeon.rol}}</li>
+						{% if campeon.rol_secundario %}
+							<li><p>Rol secundario:</p> {{campeon.rol_secundario}}</li>
+						{% endif %}
+						<li><p>Última actualización:</p> {{campeon.ultima_actualizacion}}</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Historia -->
+			<div class="campeon-datos-contenido" data-content="historia">
+				<div class="campeon-datos-padding">
+					<p>{{campeon.lore|safe}}</p>
+				</div>
+			</div>
+			<!---->
+		</section>
+	{% else %}
+		<div id="campeon-noHayDatos">No existen los datos adicionales de {{campeon.nombre}} (haz click en Obtener datos)</div>
 	{% endif %}
+	<script>
+		var templateData = {
+			championId: {{campeon.get_champion_id}},
+			url: '{{campeon.get_absolute_url}}'
+		};
+	</script>
 {% endblock %}
 {% block css_files %}
 	<link rel="stylesheet" href="{% static 'css/campeon.css' %}">

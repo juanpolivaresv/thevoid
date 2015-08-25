@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from random import shuffle
 from campeones.models import Campeon
 
@@ -8,4 +8,4 @@ def home(request):
 	shuffle(x)
 	campeon_al_azar = campeones[x[0]]
 	template = 'home.html'
-	return render_to_response(template, {'campeon_al_azar': campeon_al_azar})
+	return render(request, template, {'campeon_al_azar': campeon_al_azar})
